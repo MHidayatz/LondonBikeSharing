@@ -1,0 +1,1944 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20232.23.0909.1159                               -->
+<workbook original-version='18.1' source-build='2023.2.2 (20232.23.0909.1159)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <CustomReferenceLineTooltips />
+    <GroupAction />
+    <_.fcp.GroupActionAddRemove.true...GroupActionAddRemove />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <VizInTooltipHideWorksheet />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Moving Average Period' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;day&quot;'>
+        <calculation class='tableau' formula='&quot;day&quot;' />
+        <members>
+          <member value='&quot;day&quot;' />
+          <member value='&quot;week&quot;' />
+          <member value='&quot;month&quot;' />
+        </members>
+      </column>
+      <column caption='Moving Average Duration' datatype='integer' name='[Parameter 2]' param-domain-type='any' role='measure' type='quantitative' value='9'>
+        <calculation class='tableau' formula='9' />
+      </column>
+    </datasource>
+    <datasource caption='Data (london_bikes_final)' inline='true' name='federated.04umwum0h7l0gn13icjse08cofnv' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='london_bikes_final' name='excel-direct.026pcio0kg3c6c14wre2u13lbs83'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/user/OneDrive - 4y0flc/DataScience/DataWithMo/BikeSharing/data/london_bikes_final.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.026pcio0kg3c6c14wre2u13lbs83' name='Data' table='[Data$]' type='table'>
+          <columns gridOrigin='A1:K17415:no:A1:K17415:0' header='yes' outcome='6'>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='datetime' date-parse-format='yyyy-MM-dd HH:mm:ss' name='time' ordinal='1' />
+            <column datatype='integer' name='count' ordinal='2' />
+            <column datatype='real' name='temp_real_C' ordinal='3' />
+            <column datatype='real' name='temp_feels_like_C' ordinal='4' />
+            <column datatype='real' name='humidity_percent' ordinal='5' />
+            <column datatype='real' name='wind_speed_kph' ordinal='6' />
+            <column datatype='string' name='weather' ordinal='7' />
+            <column datatype='integer' name='is_holiday' ordinal='8' />
+            <column datatype='integer' name='is_weekend' ordinal='9' />
+            <column datatype='string' name='season' ordinal='10' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='excel-direct.026pcio0kg3c6c14wre2u13lbs83' name='Data' table='[Data$]' type='table'>
+          <columns gridOrigin='A1:K17415:no:A1:K17415:0' header='yes' outcome='6'>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='datetime' date-parse-format='yyyy-MM-dd HH:mm:ss' name='time' ordinal='1' />
+            <column datatype='integer' name='count' ordinal='2' />
+            <column datatype='real' name='temp_real_C' ordinal='3' />
+            <column datatype='real' name='temp_feels_like_C' ordinal='4' />
+            <column datatype='real' name='humidity_percent' ordinal='5' />
+            <column datatype='real' name='wind_speed_kph' ordinal='6' />
+            <column datatype='string' name='weather' ordinal='7' />
+            <column datatype='integer' name='is_holiday' ordinal='8' />
+            <column datatype='integer' name='is_weekend' ordinal='9' />
+            <column datatype='string' name='season' ordinal='10' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Data]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:K17415:no:A1:K17415:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[Data]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data_B95A7FFAAAF9479FBD17B258CC4AAC1F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[time]</local-name>
+            <parent-name>[Data]</parent-name>
+            <remote-alias>time</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RSG_S2' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data_B95A7FFAAAF9479FBD17B258CC4AAC1F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count]</local-name>
+            <parent-name>[Data]</parent-name>
+            <remote-alias>count</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data_B95A7FFAAAF9479FBD17B258CC4AAC1F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>temp_real_C</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[temp_real_C]</local-name>
+            <parent-name>[Data]</parent-name>
+            <remote-alias>temp_real_C</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data_B95A7FFAAAF9479FBD17B258CC4AAC1F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>temp_feels_like_C</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[temp_feels_like_C]</local-name>
+            <parent-name>[Data]</parent-name>
+            <remote-alias>temp_feels_like_C</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data_B95A7FFAAAF9479FBD17B258CC4AAC1F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>humidity_percent</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[humidity_percent]</local-name>
+            <parent-name>[Data]</parent-name>
+            <remote-alias>humidity_percent</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data_B95A7FFAAAF9479FBD17B258CC4AAC1F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wind_speed_kph</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[wind_speed_kph]</local-name>
+            <parent-name>[Data]</parent-name>
+            <remote-alias>wind_speed_kph</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data_B95A7FFAAAF9479FBD17B258CC4AAC1F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>weather</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[weather]</local-name>
+            <parent-name>[Data]</parent-name>
+            <remote-alias>weather</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RSG_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data_B95A7FFAAAF9479FBD17B258CC4AAC1F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_holiday</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[is_holiday]</local-name>
+            <parent-name>[Data]</parent-name>
+            <remote-alias>is_holiday</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data_B95A7FFAAAF9479FBD17B258CC4AAC1F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_weekend</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[is_weekend]</local-name>
+            <parent-name>[Data]</parent-name>
+            <remote-alias>is_weekend</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data_B95A7FFAAAF9479FBD17B258CC4AAC1F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>season</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[season]</local-name>
+            <parent-name>[Data]</parent-name>
+            <remote-alias>season</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RSG_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Data_B95A7FFAAAF9479FBD17B258CC4AAC1F]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Moving Average Rides' datatype='real' name='[Calculation1]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='WINDOW_AVG(SUM([count]), -[Parameters].[Parameter 2] + 1, 0)'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Moving Average Period' datatype='date' datatype-customized='true' name='[Calculation_1288029499855192064]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATE(DATETRUNC([Parameters].[Parameter 1], [time]))' />
+      </column>
+      <column caption='Min Month' datatype='date' name='[Calculation_1288029499855470593]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='{ MIN(IF [Moving Average Period Set] THEN [Calculation_1288029499855192064] END) }' />
+      </column>
+      <column caption='In Range' datatype='boolean' name='[Calculation_1288029499856297987]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[Calculation_1288029499855192064] &gt;= [Calculation_1288029499855470593]&#13;&#10;AND&#13;&#10;[Calculation_1288029499855192064] &lt;= [Min Month (copy)_1288029499855671298]' />
+      </column>
+      <column caption='In Range Rides' datatype='integer' name='[Calculation_1288029500311506948]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{ SUM(INT( [Calculation_1288029499856297987]) * [count]) }' />
+      </column>
+      <column caption='Max Month' datatype='date' name='[Min Month (copy)_1288029499855671298]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='{ MAX(IF [Moving Average Period Set] THEN [Calculation_1288029499855192064] END) }' />
+      </column>
+      <column aggregation='None' caption='Wind kph' datatype='integer' name='[Wind Speed Kph (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-2' formula='[wind_speed_kph]' peg='0' size='3.43' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='Data' datatype='table' name='[__tableau_internal_object_id__].[Data_B95A7FFAAAF9479FBD17B258CC4AAC1F]' role='measure' type='quantitative' />
+      <column caption='Count' datatype='integer' name='[count]' role='measure' type='quantitative' />
+      <column caption='Humidity Percent' datatype='real' name='[humidity_percent]' role='measure' type='quantitative' />
+      <column caption='Is Holiday' datatype='integer' name='[is_holiday]' role='measure' type='quantitative' />
+      <column caption='Is Weekend' datatype='integer' name='[is_weekend]' role='measure' type='quantitative' />
+      <column caption='Season' datatype='string' name='[season]' role='dimension' type='nominal' />
+      <column aggregation='None' caption='Temp C' datatype='integer' name='[temp real C (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-2' formula='[temp_real_C]' peg='0' size='2.44' />
+      </column>
+      <column caption='temp feels like C' datatype='real' name='[temp_feels_like_C]' role='measure' type='quantitative' />
+      <column caption='temp real C' datatype='real' name='[temp_real_C]' role='measure' type='quantitative' />
+      <column caption='Time' datatype='datetime' name='[time]' role='dimension' type='ordinal' />
+      <column caption='Weather' datatype='string' name='[weather]' role='dimension' type='nominal' />
+      <column caption='Wind Speed Kph' datatype='real' name='[wind_speed_kph]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_1288029499856297987]' derivation='Attribute' name='[attr:Calculation_1288029499856297987:nk]' pivot='key' type='nominal' />
+      <column-instance column='[time]' derivation='Hour' name='[hr:time:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[weather]' derivation='None' name='[none:weather:nk]' pivot='key' type='nominal' />
+      <group caption='Moving Average Period Set' name='[Moving Average Period Set]' name-style='unqualified' user:ui-builder='filter-group'>
+        <groupfilter from='#2015-03-26#' function='range' level='[Calculation_1288029499855192064]' to='#2015-08-29#' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+      </group>
+      <group caption='Tooltip (Min Month,Max Month,Wind kph,Temp C)' hidden='true' name='[Tooltip (Min Month,Max Month,Wind kph,Temp C)]' name-style='unqualified' user:auto-column='sheet_link' user:ui-vit-column='true'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Calculation_1288029499855470593]' />
+          <groupfilter function='level-members' level='[Min Month (copy)_1288029499855671298]' />
+          <groupfilter function='level-members' level='[Wind Speed Kph (bin)]' />
+          <groupfilter function='level-members' level='[temp real C (bin)]' />
+        </groupfilter>
+      </group>
+      <group caption='Tooltip (Moving Average Period,Min Month,Max Month)' hidden='true' name='[Tooltip (Moving Average Period,Min Month,Max Month)]' name-style='unqualified' user:auto-column='sheet_link' user:ui-vit-column='true'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Calculation_1288029499855192064]' />
+          <groupfilter function='level-members' level='[Calculation_1288029499855470593]' />
+          <groupfilter function='level-members' level='[Min Month (copy)_1288029499855671298]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[attr:Calculation_1288029499856297987:nk]' type='palette'>
+            <map to='#0a611b'>
+              <bucket>true</bucket>
+            </map>
+            <map to='#9b93c9'>
+              <bucket>false</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>%many-values%</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[hr:time:ok]' type='palette'>
+            <map to='#499894'>
+              <bucket>8</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>0</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>20</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>12</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>9</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>18</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>21</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>16</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>6</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>13</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>14</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>17</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>19</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>10</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>7</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>22</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>15</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>11</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>23</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:weather:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Broken clouds&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Rain with thunderstorm&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Rain&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Snowfall&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Cloudy&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Scattered clouds&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Clear&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Singapore&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Moving Average Period' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;day&quot;'>
+          <calculation class='tableau' formula='&quot;day&quot;' />
+        </column>
+        <column caption='Moving Average Duration' datatype='integer' name='[Parameter 2]' param-domain-type='any' role='measure' type='quantitative' value='9'>
+          <calculation class='tableau' formula='9' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Data' id='Data_B95A7FFAAAF9479FBD17B258CC4AAC1F'>
+            <properties context=''>
+              <relation connection='excel-direct.026pcio0kg3c6c14wre2u13lbs83' name='Data' table='[Data$]' type='table'>
+                <columns gridOrigin='A1:K17415:no:A1:K17415:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='datetime' date-parse-format='yyyy-MM-dd HH:mm:ss' name='time' ordinal='1' />
+                  <column datatype='integer' name='count' ordinal='2' />
+                  <column datatype='real' name='temp_real_C' ordinal='3' />
+                  <column datatype='real' name='temp_feels_like_C' ordinal='4' />
+                  <column datatype='real' name='humidity_percent' ordinal='5' />
+                  <column datatype='real' name='wind_speed_kph' ordinal='6' />
+                  <column datatype='string' name='weather' ordinal='7' />
+                  <column datatype='integer' name='is_holiday' ordinal='8' />
+                  <column datatype='integer' name='is_weekend' ordinal='9' />
+                  <column datatype='string' name='season' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <edit-group-action caption='Update Moving Average Period Set' name='[Action1_B20250383C5D42B9B5C522F96DBB231B]'>
+      <activation type='on-select' />
+      <source dashboard='London Bike Sharing Dashboard' type='sheet' worksheet='MovingAverage' />
+      <_.fcp.GroupActionAddRemove.true...add-or-remove-marks value='assign' />
+      <params>
+        <param name='selection-clear-set-option' value='do-nothing' />
+        <param name='target-group' value='[federated.04umwum0h7l0gn13icjse08cofnv].[Moving Average Period Set]' />
+      </params>
+    </edit-group-action>
+  </actions>
+  <worksheets>
+    <worksheet name='Heatmap'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#0a611b'>Temperature vs wind speed </run>
+            <run bold='true' fontcolor='#0a611b' fontsize='10'>between</run>
+            <run fontcolor='#0a611b' fontsize='10'><![CDATA[ <[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499855470593:qk]> and <[federated.04umwum0h7l0gn13icjse08cofnv].[none:Min Month (copy)_1288029499855671298:qk]>]]></run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data (london_bikes_final)' name='federated.04umwum0h7l0gn13icjse08cofnv' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Moving Average Period' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;day&quot;'>
+              <calculation class='tableau' formula='&quot;day&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.04umwum0h7l0gn13icjse08cofnv'>
+            <column caption='Moving Average Period' datatype='date' datatype-customized='true' name='[Calculation_1288029499855192064]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATE(DATETRUNC([Parameters].[Parameter 1], [time]))' />
+            </column>
+            <column caption='Min Month' datatype='date' name='[Calculation_1288029499855470593]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{ MIN(IF [Moving Average Period Set] THEN [Calculation_1288029499855192064] END) }' />
+            </column>
+            <column caption='In Range' datatype='boolean' name='[Calculation_1288029499856297987]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Calculation_1288029499855192064] &gt;= [Calculation_1288029499855470593]&#13;&#10;AND&#13;&#10;[Calculation_1288029499855192064] &lt;= [Min Month (copy)_1288029499855671298]' />
+            </column>
+            <column caption='Max Month' datatype='date' name='[Min Month (copy)_1288029499855671298]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{ MAX(IF [Moving Average Period Set] THEN [Calculation_1288029499855192064] END) }' />
+            </column>
+            <column aggregation='None' caption='Wind kph' datatype='integer' name='[Wind Speed Kph (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='-2' formula='[wind_speed_kph]' peg='0' size='3.43' />
+            </column>
+            <column caption='Count' datatype='integer' name='[count]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1288029499855470593]' derivation='None' name='[none:Calculation_1288029499855470593:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1288029499856297987]' derivation='None' name='[none:Calculation_1288029499856297987:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Min Month (copy)_1288029499855671298]' derivation='None' name='[none:Min Month (copy)_1288029499855671298:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Wind Speed Kph (bin)]' derivation='None' name='[none:Wind Speed Kph (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[temp real C (bin)]' derivation='None' name='[none:temp real C (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[count]' derivation='Sum' name='[sum:count:qk]' pivot='key' type='quantitative' />
+            <column aggregation='None' caption='Temp C' datatype='integer' name='[temp real C (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='-2' formula='[temp_real_C]' peg='0' size='2.44' />
+            </column>
+            <column caption='temp real C' datatype='real' name='[temp_real_C]' role='measure' type='quantitative' />
+            <column caption='Time' datatype='datetime' name='[time]' role='dimension' type='ordinal' />
+            <column caption='Wind Speed Kph' datatype='real' name='[wind_speed_kph]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499856297987:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1288029499856297987:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499856297987:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.04umwum0h7l0gn13icjse08cofnv].[none:temp real C (bin):ok]' value='n#,##0.0;-#,##0.0' />
+            <format attr='text-format' field='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Wind Speed Kph (bin):ok]' value='n#,##0.0;-#,##0.0' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.04umwum0h7l0gn13icjse08cofnv].[sum:count:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#e5dce4</color>
+                <color>#d9c9d8</color>
+                <color>#cdb6cc</color>
+                <color>#c2a4c0</color>
+                <color>#b693b4</color>
+                <color>#aa83a8</color>
+                <color>#9f749c</color>
+                <color>#936690</color>
+                <color>#875984</color>
+                <color>#7c4d79</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refband'>
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dashed' />
+            <format attr='fill-color' id='refline0' value='#e8edda' />
+            <format attr='stroke-color' id='refline0' value='#0a611b' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.04umwum0h7l0gn13icjse08cofnv].[sum:count:qk]' />
+              <text column='[federated.04umwum0h7l0gn13icjse08cofnv].[sum:count:qk]' />
+              <lod column='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499855470593:qk]' />
+              <lod column='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Min Month (copy)_1288029499855671298:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontcolor='#0a611b'><![CDATA[Temp C:	<[federated.04umwum0h7l0gn13icjse08cofnv].[none:temp real C (bin):ok]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#0a611b'><![CDATA[Wind kph:	<[federated.04umwum0h7l0gn13icjse08cofnv].[none:Wind Speed Kph (bin):ok]>]]></run>
+                <run>Æ&#10;&#10;</run>
+                <run bold='true' fontcolor='#0a611b'><![CDATA[<Sheet name="Weather" maxwidth="300" maxheight="200" filter="<All Fields>">]]></run>
+                <run>Æ&#10;&#10;</run>
+                <run bold='true' fontcolor='#0a611b'><![CDATA[<Sheet name="Hour" maxwidth="300" maxheight="400" filter="<All Fields>">]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run bold='true'>&lt;</run>
+                <run bold='true'>[federated.04umwum0h7l0gn13icjse08cofnv].[sum:count:qk]</run>
+                <run bold='true'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='line-pattern-only' value='solid' />
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.04umwum0h7l0gn13icjse08cofnv].[none:temp real C (bin):ok]</rows>
+        <cols>[federated.04umwum0h7l0gn13icjse08cofnv].[none:Wind Speed Kph (bin):ok]</cols>
+        <show-full-range>
+          <column>[federated.04umwum0h7l0gn13icjse08cofnv].[Wind Speed Kph (bin)]</column>
+          <column>[federated.04umwum0h7l0gn13icjse08cofnv].[temp real C (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{2FAFE46C-F4A9-4955-A6DF-55E8857A4003}' />
+    </worksheet>
+    <worksheet name='Hour'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data (london_bikes_final)' name='federated.04umwum0h7l0gn13icjse08cofnv' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Moving Average Period' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;day&quot;'>
+              <calculation class='tableau' formula='&quot;day&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.04umwum0h7l0gn13icjse08cofnv'>
+            <column caption='Moving Average Period' datatype='date' datatype-customized='true' name='[Calculation_1288029499855192064]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATE(DATETRUNC([Parameters].[Parameter 1], [time]))' />
+            </column>
+            <column caption='Min Month' datatype='date' name='[Calculation_1288029499855470593]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{ MIN(IF [Moving Average Period Set] THEN [Calculation_1288029499855192064] END) }' />
+            </column>
+            <column caption='In Range' datatype='boolean' name='[Calculation_1288029499856297987]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Calculation_1288029499855192064] &gt;= [Calculation_1288029499855470593]&#13;&#10;AND&#13;&#10;[Calculation_1288029499855192064] &lt;= [Min Month (copy)_1288029499855671298]' />
+            </column>
+            <column caption='Max Month' datatype='date' name='[Min Month (copy)_1288029499855671298]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{ MAX(IF [Moving Average Period Set] THEN [Calculation_1288029499855192064] END) }' />
+            </column>
+            <column aggregation='None' caption='Wind kph' datatype='integer' name='[Wind Speed Kph (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='-2' formula='[wind_speed_kph]' peg='0' size='3.43' />
+            </column>
+            <column caption='Count' datatype='integer' name='[count]' role='measure' type='quantitative' />
+            <column-instance column='[time]' derivation='Hour' name='[hr:time:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_1288029499855470593]' derivation='None' name='[none:Calculation_1288029499855470593:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1288029499856297987]' derivation='None' name='[none:Calculation_1288029499856297987:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Min Month (copy)_1288029499855671298]' derivation='None' name='[none:Min Month (copy)_1288029499855671298:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[count]' derivation='Sum' name='[sum:count:qk]' pivot='key' type='quantitative' />
+            <column aggregation='None' caption='Temp C' datatype='integer' name='[temp real C (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='-2' formula='[temp_real_C]' peg='0' size='2.44' />
+            </column>
+            <column caption='temp real C' datatype='real' name='[temp_real_C]' role='measure' type='quantitative' />
+            <column caption='Time' datatype='datetime' name='[time]' role='dimension' type='ordinal' />
+            <column caption='Wind Speed Kph' datatype='real' name='[wind_speed_kph]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.04umwum0h7l0gn13icjse08cofnv].[Tooltip (Min Month,Max Month,Wind kph,Temp C)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action - Hour]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Calculation_1288029499855470593]' />
+              <groupfilter function='level-members' level='[Min Month (copy)_1288029499855671298]' />
+              <groupfilter function='level-members' level='[Wind Speed Kph (bin)]' />
+              <groupfilter function='level-members' level='[temp real C (bin)]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.04umwum0h7l0gn13icjse08cofnv].[Tooltip (Moving Average Period,Min Month,Max Month)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action - Hour]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Calculation_1288029499855192064]' />
+              <groupfilter function='level-members' level='[Calculation_1288029499855470593]' />
+              <groupfilter function='level-members' level='[Min Month (copy)_1288029499855671298]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499856297987:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1288029499856297987:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499856297987:nk]</column>
+            <column>[federated.04umwum0h7l0gn13icjse08cofnv].[Tooltip (Moving Average Period,Min Month,Max Month)]</column>
+            <column>[federated.04umwum0h7l0gn13icjse08cofnv].[Tooltip (Min Month,Max Month,Wind kph,Temp C)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+            <format attr='title' class='0' field='[federated.04umwum0h7l0gn13icjse08cofnv].[sum:count:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refband'>
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dashed' />
+            <format attr='fill-color' id='refline0' value='#e8edda' />
+            <format attr='stroke-color' id='refline0' value='#0a611b' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.04umwum0h7l0gn13icjse08cofnv].[hr:time:ok]' />
+              <text column='[federated.04umwum0h7l0gn13icjse08cofnv].[sum:count:qk]' />
+              <lod column='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499855470593:qk]' />
+              <lod column='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Min Month (copy)_1288029499855671298:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run bold='true'>&lt;</run>
+                <run bold='true'>[federated.04umwum0h7l0gn13icjse08cofnv].[sum:count:qk]</run>
+                <run bold='true'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='line-pattern-only' value='solid' />
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.04umwum0h7l0gn13icjse08cofnv].[hr:time:ok]</rows>
+        <cols>[federated.04umwum0h7l0gn13icjse08cofnv].[sum:count:qk]</cols>
+      </table>
+      <simple-id uuid='{5AD6D3F8-728A-4088-97FA-39699E8F09E3}' />
+    </worksheet>
+    <worksheet name='MovingAverage'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#0a611b'>&lt;</run>
+            <run bold='true' fontcolor='#0a611b'>[Parameters].[Parameter 2]</run>
+            <run bold='true' fontcolor='#0a611b'>&gt; &lt;</run>
+            <run bold='true' fontcolor='#0a611b'>[Parameters].[Parameter 1]</run>
+            <run bold='true' fontcolor='#0a611b'>&gt; moving average</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data (london_bikes_final)' name='federated.04umwum0h7l0gn13icjse08cofnv' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Moving Average Period' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;day&quot;'>
+              <calculation class='tableau' formula='&quot;day&quot;' />
+            </column>
+            <column caption='Moving Average Duration' datatype='integer' name='[Parameter 2]' param-domain-type='any' role='measure' type='quantitative' value='9'>
+              <calculation class='tableau' formula='9' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.04umwum0h7l0gn13icjse08cofnv'>
+            <column caption='Moving Average Rides' datatype='real' name='[Calculation1]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='WINDOW_AVG(SUM([count]), -[Parameters].[Parameter 2] + 1, 0)'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Moving Average Period' datatype='date' datatype-customized='true' name='[Calculation_1288029499855192064]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATE(DATETRUNC([Parameters].[Parameter 1], [time]))' />
+            </column>
+            <column caption='Min Month' datatype='date' name='[Calculation_1288029499855470593]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{ MIN(IF [Moving Average Period Set] THEN [Calculation_1288029499855192064] END) }' />
+            </column>
+            <column caption='In Range' datatype='boolean' name='[Calculation_1288029499856297987]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Calculation_1288029499855192064] &gt;= [Calculation_1288029499855470593]&#13;&#10;AND&#13;&#10;[Calculation_1288029499855192064] &lt;= [Min Month (copy)_1288029499855671298]' />
+            </column>
+            <column caption='Max Month' datatype='date' name='[Min Month (copy)_1288029499855671298]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{ MAX(IF [Moving Average Period Set] THEN [Calculation_1288029499855192064] END) }' />
+            </column>
+            <column-instance column='[Calculation_1288029499856297987]' derivation='Attribute' name='[attr:Calculation_1288029499856297987:nk]' pivot='key' type='nominal' />
+            <column caption='Count' datatype='integer' name='[count]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1288029499855192064]' derivation='None' name='[none:Calculation_1288029499855192064:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1288029499855470593]' derivation='None' name='[none:Calculation_1288029499855470593:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Min Month (copy)_1288029499855671298]' derivation='None' name='[none:Min Month (copy)_1288029499855671298:qk]' pivot='key' type='quantitative' />
+            <column caption='Time' datatype='datetime' name='[time]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation1]' derivation='User' name='[usr:Calculation1:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499855192064:qk]' included-values='in-range'>
+            <min>#2015-01-01#</min>
+            <max>#2017-01-01#</max>
+          </filter>
+          <slices>
+            <column>[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499855192064:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refband'>
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dashed' />
+            <format attr='fill-color' id='refline0' value='#e8edda' />
+            <format attr='stroke-color' id='refline0' value='#0a611b' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#0a611b' />
+          </style-rule>
+          <style-rule element='quick-filter-title'>
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#0a611b' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.04umwum0h7l0gn13icjse08cofnv].[attr:Calculation_1288029499856297987:nk]' />
+              <lod column='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499855470593:qk]' />
+              <lod column='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Min Month (copy)_1288029499855671298:qk]' />
+            </encodings>
+            <reference-line axis-column='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499855192064:qk]' enable-instant-analytics='false' formula='min' id='refline0' label-type='none' paired-id='refline1' scope='per-table' symmetric='false' tooltip-type='none' value-column='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499855470593:qk]' z-order='1' />
+            <reference-line axis-column='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499855192064:qk]' enable-instant-analytics='false' formula='max' id='refline1' label-type='none' paired-id='refline0' scope='per-table' symmetric='false' tooltip-type='none' value-column='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Min Month (copy)_1288029499855671298:qk]' z-order='2' />
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontcolor='#0a611b'><![CDATA[Date:	<[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499855192064:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontcolor='#0a611b'><![CDATA[Moving Average Rides:	<[federated.04umwum0h7l0gn13icjse08cofnv].[usr:Calculation1:qk]>]]></run>
+                <run>Æ&#10;&#10;</run>
+                <run bold='true'><![CDATA[<Sheet name="Weather" maxwidth="300" maxheight="200" filter="<All Fields>">]]></run>
+                <run>Æ&#10;&#10;</run>
+                <run bold='true'><![CDATA[<Sheet name="Hour" maxwidth="300" maxheight="400" filter="<All Fields>">]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='trendline'>
+                <format attr='line-pattern-only' value='solid' />
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.04umwum0h7l0gn13icjse08cofnv].[usr:Calculation1:qk]</rows>
+        <cols>[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499855192064:qk]</cols>
+      </table>
+      <simple-id uuid='{120E1887-48CB-4B1F-948E-EEFF86AA7F7F}' />
+    </worksheet>
+    <worksheet name='TotalRides'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#0a611b'>London Bike Rides</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#0a611b' fontsize='10'><![CDATA[between <[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499855470593:qk]> and <[federated.04umwum0h7l0gn13icjse08cofnv].[none:Min Month (copy)_1288029499855671298:qk]>]]></run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data (london_bikes_final)' name='federated.04umwum0h7l0gn13icjse08cofnv' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Moving Average Period' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;day&quot;'>
+              <calculation class='tableau' formula='&quot;day&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.04umwum0h7l0gn13icjse08cofnv'>
+            <column caption='Moving Average Period' datatype='date' datatype-customized='true' name='[Calculation_1288029499855192064]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATE(DATETRUNC([Parameters].[Parameter 1], [time]))' />
+            </column>
+            <column caption='Min Month' datatype='date' name='[Calculation_1288029499855470593]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{ MIN(IF [Moving Average Period Set] THEN [Calculation_1288029499855192064] END) }' />
+            </column>
+            <column caption='In Range' datatype='boolean' name='[Calculation_1288029499856297987]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Calculation_1288029499855192064] &gt;= [Calculation_1288029499855470593]&#13;&#10;AND&#13;&#10;[Calculation_1288029499855192064] &lt;= [Min Month (copy)_1288029499855671298]' />
+            </column>
+            <column caption='In Range Rides' datatype='integer' name='[Calculation_1288029500311506948]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{ SUM(INT( [Calculation_1288029499856297987]) * [count]) }' />
+            </column>
+            <column caption='Max Month' datatype='date' name='[Min Month (copy)_1288029499855671298]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{ MAX(IF [Moving Average Period Set] THEN [Calculation_1288029499855192064] END) }' />
+            </column>
+            <column caption='Count' datatype='integer' name='[count]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1288029499855470593]' derivation='None' name='[none:Calculation_1288029499855470593:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1288029499856297987]' derivation='None' name='[none:Calculation_1288029499856297987:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Min Month (copy)_1288029499855671298]' derivation='None' name='[none:Min Month (copy)_1288029499855671298:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1288029500311506948]' derivation='Sum' name='[sum:Calculation_1288029500311506948:qk]' pivot='key' type='quantitative' />
+            <column caption='Time' datatype='datetime' name='[time]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499856297987:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1288029499856297987:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499856297987:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refband'>
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dashed' />
+            <format attr='fill-color' id='refline0' value='#e8edda' />
+            <format attr='stroke-color' id='refline0' value='#0a611b' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.04umwum0h7l0gn13icjse08cofnv].[sum:Calculation_1288029500311506948:qk]' />
+              <lod column='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Min Month (copy)_1288029499855671298:qk]' />
+              <lod column='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499855470593:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#0a611b' fontsize='36'>&lt;</run>
+                <run bold='true' fontcolor='#0a611b' fontsize='36'>[federated.04umwum0h7l0gn13icjse08cofnv].[sum:Calculation_1288029500311506948:qk]</run>
+                <run bold='true' fontcolor='#0a611b' fontsize='36'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='center' />
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='line-pattern-only' value='solid' />
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{03B59D2F-B2A8-466E-ACB1-A30C2A6EAE8C}' />
+    </worksheet>
+    <worksheet name='Weather'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Data (london_bikes_final)' name='federated.04umwum0h7l0gn13icjse08cofnv' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Moving Average Period' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;day&quot;'>
+              <calculation class='tableau' formula='&quot;day&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.04umwum0h7l0gn13icjse08cofnv'>
+            <column caption='Moving Average Period' datatype='date' datatype-customized='true' name='[Calculation_1288029499855192064]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATE(DATETRUNC([Parameters].[Parameter 1], [time]))' />
+            </column>
+            <column caption='Min Month' datatype='date' name='[Calculation_1288029499855470593]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{ MIN(IF [Moving Average Period Set] THEN [Calculation_1288029499855192064] END) }' />
+            </column>
+            <column caption='In Range' datatype='boolean' name='[Calculation_1288029499856297987]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Calculation_1288029499855192064] &gt;= [Calculation_1288029499855470593]&#13;&#10;AND&#13;&#10;[Calculation_1288029499855192064] &lt;= [Min Month (copy)_1288029499855671298]' />
+            </column>
+            <column caption='Max Month' datatype='date' name='[Min Month (copy)_1288029499855671298]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{ MAX(IF [Moving Average Period Set] THEN [Calculation_1288029499855192064] END) }' />
+            </column>
+            <column aggregation='None' caption='Wind kph' datatype='integer' name='[Wind Speed Kph (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='-2' formula='[wind_speed_kph]' peg='0' size='3.43' />
+            </column>
+            <column caption='Count' datatype='integer' name='[count]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1288029499855470593]' derivation='None' name='[none:Calculation_1288029499855470593:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1288029499856297987]' derivation='None' name='[none:Calculation_1288029499856297987:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Min Month (copy)_1288029499855671298]' derivation='None' name='[none:Min Month (copy)_1288029499855671298:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[weather]' derivation='None' name='[none:weather:nk]' pivot='key' type='nominal' />
+            <column-instance column='[count]' derivation='Sum' name='[sum:count:qk]' pivot='key' type='quantitative' />
+            <column aggregation='None' caption='Temp C' datatype='integer' name='[temp real C (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='-2' formula='[temp_real_C]' peg='0' size='2.44' />
+            </column>
+            <column caption='temp real C' datatype='real' name='[temp_real_C]' role='measure' type='quantitative' />
+            <column caption='Time' datatype='datetime' name='[time]' role='dimension' type='ordinal' />
+            <column caption='Weather' datatype='string' name='[weather]' role='dimension' type='nominal' />
+            <column caption='Wind Speed Kph' datatype='real' name='[wind_speed_kph]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.04umwum0h7l0gn13icjse08cofnv].[Tooltip (Min Month,Max Month,Wind kph,Temp C)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action - Weather]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Calculation_1288029499855470593]' />
+              <groupfilter function='level-members' level='[Min Month (copy)_1288029499855671298]' />
+              <groupfilter function='level-members' level='[Wind Speed Kph (bin)]' />
+              <groupfilter function='level-members' level='[temp real C (bin)]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.04umwum0h7l0gn13icjse08cofnv].[Tooltip (Moving Average Period,Min Month,Max Month)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action - Weather]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Calculation_1288029499855192064]' />
+              <groupfilter function='level-members' level='[Calculation_1288029499855470593]' />
+              <groupfilter function='level-members' level='[Min Month (copy)_1288029499855671298]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499856297987:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1288029499856297987:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.04umwum0h7l0gn13icjse08cofnv].[none:weather:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.04umwum0h7l0gn13icjse08cofnv].[sum:count:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499856297987:nk]</column>
+            <column>[federated.04umwum0h7l0gn13icjse08cofnv].[Tooltip (Moving Average Period,Min Month,Max Month)]</column>
+            <column>[federated.04umwum0h7l0gn13icjse08cofnv].[Tooltip (Min Month,Max Month,Wind kph,Temp C)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+            <format attr='title' class='0' field='[federated.04umwum0h7l0gn13icjse08cofnv].[sum:count:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refband'>
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dashed' />
+            <format attr='fill-color' id='refline0' value='#e8edda' />
+            <format attr='stroke-color' id='refline0' value='#0a611b' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.04umwum0h7l0gn13icjse08cofnv].[none:weather:nk]' />
+              <text column='[federated.04umwum0h7l0gn13icjse08cofnv].[sum:count:qk]' />
+              <lod column='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499855470593:qk]' />
+              <lod column='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Min Month (copy)_1288029499855671298:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run bold='true'>&lt;</run>
+                <run bold='true'>[federated.04umwum0h7l0gn13icjse08cofnv].[sum:count:qk]</run>
+                <run bold='true'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='line-pattern-only' value='solid' />
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.04umwum0h7l0gn13icjse08cofnv].[none:weather:nk]</rows>
+        <cols>[federated.04umwum0h7l0gn13icjse08cofnv].[sum:count:qk]</cols>
+      </table>
+      <simple-id uuid='{20EC8D20-7969-4FB6-B3FC-4020111872A1}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='London Bike Sharing Dashboard'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#f5f5f5' />
+        </style-rule>
+        <style-rule element='parameter-ctrl'>
+          <format attr='color' value='#0a611b' />
+          <format attr='font-weight' value='bold' />
+          <format attr='border-color' value='#0a611b' />
+          <format attr='border-style' value='dotted' />
+        </style-rule>
+        <style-rule element='parameter-ctrl-title'>
+          <format attr='font-weight' value='bold' />
+          <format attr='color' value='#0a611b' />
+        </style-rule>
+      </style>
+      <size maxheight='768' maxwidth='1366' minheight='768' minwidth='1366' preset-index='0' sizing-mode='fixed' />
+      <datasources>
+        <datasource name='Parameters' />
+        <datasource caption='Data (london_bikes_final)' name='federated.04umwum0h7l0gn13icjse08cofnv' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Moving Average Period' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;day&quot;'>
+          <calculation class='tableau' formula='&quot;day&quot;' />
+          <members>
+            <member value='&quot;day&quot;' />
+            <member value='&quot;week&quot;' />
+            <member value='&quot;month&quot;' />
+          </members>
+        </column>
+        <column caption='Moving Average Duration' datatype='integer' name='[Parameter 2]' param-domain-type='any' role='measure' type='quantitative' value='9'>
+          <calculation class='tableau' formula='9' />
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.04umwum0h7l0gn13icjse08cofnv'>
+        <column caption='Moving Average Period' datatype='date' datatype-customized='true' name='[Calculation_1288029499855192064]' role='dimension' type='ordinal'>
+          <calculation class='tableau' formula='DATE(DATETRUNC([Parameters].[Parameter 1], [time]))' />
+        </column>
+        <column-instance column='[Calculation_1288029499855192064]' derivation='None' name='[none:Calculation_1288029499855192064:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98958' id='29' param='horz' type-v2='layout-flow' w='99414' x='293' y='521'>
+            <zone h='98958' id='27' type-v2='layout-basic' w='99414' x='293' y='521'>
+              <zone h='36976' id='8' param='horz' type-v2='layout-flow' w='99414' x='293' y='521'>
+                <zone h='36976' id='6' type-v2='layout-basic' w='99414' x='293' y='521'>
+                  <zone h='36976' id='3' name='TotalRides' w='21426' x='293' y='521'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='36976' id='20' name='MovingAverage' w='77988' x='21719' y='521'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='61982' id='23' name='Heatmap' w='99414' x='293' y='37497'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='4' />
+          </zone-style>
+        </zone>
+        <zone h='6771' id='21' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='11493' x='75403' y='521' />
+        <zone h='6510' id='22' mode='type_in' param='[Parameters].[Parameter 2]' type-v2='paramctrl' w='14129' x='60761' y='651' />
+        <zone h='4427' id='26' type-v2='text' w='10029' x='50512' y='781'>
+          <formatted-text>
+            <run bold='true' fontcolor='#0a611b'>Drag and hold to select</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#0a611b'>time period on timeline</run>
+          </formatted-text>
+        </zone>
+        <zone h='8984' id='30' name='MovingAverage' param='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499855192064:qk]' type-v2='filter' values='database' w='12299' x='87408' y='391' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1150' minheight='1150' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='36' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97916' id='35' param='vert' type-v2='layout-flow' w='98828' x='586' y='1042'>
+                <zone fixed-size='276' h='36976' id='3' is-fixed='true' name='TotalRides' w='21426' x='293' y='521'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8984' id='30' name='MovingAverage' param='[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499855192064:qk]' type-v2='filter' values='database' w='12299' x='87408' y='391'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='276' h='36976' id='20' is-fixed='true' name='MovingAverage' w='77988' x='21719' y='521'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6771' id='21' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='11493' x='75403' y='521'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6510' id='22' mode='type_in' param='[Parameters].[Parameter 2]' type-v2='paramctrl' w='14129' x='60761' y='651'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4427' id='26' type-v2='text' w='10029' x='50512' y='781'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#0a611b'>Drag and hold to select</run>
+                    <run>Æ&#10;</run>
+                    <run bold='true' fontcolor='#0a611b'>time period on timeline</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='61982' id='23' is-fixed='true' name='Heatmap' w='99414' x='293' y='37497'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{C22B2733-B93F-4F5E-A688-B546A508806B}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' maximized='true' name='London Bike Sharing Dashboard'>
+      <viewpoints>
+        <viewpoint name='Heatmap'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='MovingAverage'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='TotalRides'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='20' />
+      <device-preview visible='true' />
+      <simple-id uuid='{986E3A89-C105-4FE8-A79F-757F2A642AC3}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Heatmap'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499856297987:nk]</field>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[none:Wind Speed Kph (bin):ok]</field>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[none:temp real C (bin):ok]</field>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[yr:Calculation_1288029499855470593:ok]</field>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[yr:Min Month (copy)_1288029499855671298:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{64CDE125-4884-4DA7-A723-C80100DC4013}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Hour'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[hr:time:ok]</field>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499856297987:nk]</field>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[yr:Calculation_1288029499855470593:ok]</field>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[yr:Min Month (copy)_1288029499855671298:ok]</field>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[yr:time:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{5160D473-27CD-4498-8A2C-601CE0A8E75B}' />
+    </window>
+    <window class='worksheet' hidden='true' name='MovingAverage'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+            <card mode='type_in' param='[Parameters].[Parameter 2]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[attr:Calculation_1288029499856297987:nk]</field>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499855192064:qk]</field>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[yr:Calculation_1288029499855192064:ok]</field>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[yr:Calculation_1288029499855470593:ok]</field>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[yr:Min Month (copy)_1288029499855671298:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{73BC5C5C-F1F2-431F-B611-B7B6103CE793}' />
+    </window>
+    <window class='worksheet' hidden='true' name='TotalRides'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499856297987:nk]</field>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[yr:Calculation_1288029499855470593:ok]</field>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[yr:Min Month (copy)_1288029499855671298:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{55B23B98-4D2F-48A9-ADA3-F12710C78222}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Weather'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[none:Calculation_1288029499856297987:nk]</field>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[none:weather:nk]</field>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[yr:Calculation_1288029499855470593:ok]</field>
+            <field>[federated.04umwum0h7l0gn13icjse08cofnv].[yr:Min Month (copy)_1288029499855671298:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{C77582C1-77D2-4773-96B6-472A8E108F2D}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='London Bike Sharing Dashboard' width='192'>
+      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
+      kHlPPqoAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
